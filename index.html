@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Creative Developer</title>
+    <title>Creative Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPgo8c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMDZiNmQ0O3N0b3Atb3BhY2l0eToxIiAvPgo8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiM4YjVjZjY7c3RvcC1vcGFjaXR5OjEiIC8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMTgiIGZpbGw9InVybCgjZ3JhZGllbnQpIiBzdHJva2U9IiMwNmI2ZDQiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSIyMCIgeT0iMjYiIGZvbnQtZmFtaWx5PSJJbnRlciIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZmZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UDwvdGV4dD4KPC9zdmc+" alt="Portfolio Logo">
-                <span>Portfolio</span>
+                <span class="logo-text">DEV</span>
             </div>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#admin" class="nav-link admin-link">Admin</a></li>
+                <li><a href="#admin" class="nav-link">Admin</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -33,61 +31,94 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="floating-elements">
-                <div class="cube cube-1"></div>
-                <div class="cube cube-2"></div>
-                <div class="cube cube-3"></div>
-                <div class="sphere sphere-1"></div>
-                <div class="sphere sphere-2"></div>
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
             </div>
-            <h1 class="hero-title">
-                <span class="gradient-text">Creative</span> Developer
-            </h1>
-            <p class="hero-subtitle">Crafting digital experiences with modern technologies and innovative design</p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
+            <div class="particles" id="particles"></div>
         </div>
-        <div class="scroll-indicator">
-            <div class="scroll-line"></div>
-            <span>Scroll Down</span>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Creative</span>
+                <span class="title-line gradient-text">Developer</span>
+            </h1>
+            <p class="hero-subtitle">Full-Stack Developer & UI/UX Designer</p>
+            <p class="hero-description">Crafting innovative digital experiences with modern technologies and creative problem-solving.</p>
+            <button class="cta-button" onclick="scrollToSection('projects')">
+                <span>View My Work</span>
+                <div class="button-glow"></div>
+            </button>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title gradient-text">About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate developer who loves creating innovative digital solutions. With expertise in modern web technologies, I bring ideas to life through clean code and engaging user experiences.</p>
-                    <div class="skills">
-                        <div class="skill-item">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                    </div>
+                    <p>I'm a passionate full-stack developer with expertise in modern web technologies. I love creating interactive experiences that blend functionality with beautiful design.</p>
+                    <p>With experience in both frontend and backend development, I bring ideas to life through clean code and innovative solutions.</p>
                 </div>
-                <div class="about-visual">
-                    <div class="profile-card">
-                        <div class="card-glow"></div>
-                        <div class="profile-content">
-                            <h3>Full Stack Developer</h3>
-                            <p>Specialized in modern web technologies</p>
+                <div class="skills-section">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="JavaScript" data-level="95">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="React" data-level="90">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Node.js" data-level="85">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Python" data-level="80">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Three.js" data-level="75">
+                            <div class="skill-info">
+                                <span class="skill-name">Three.js</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="MongoDB" data-level="70">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -98,15 +129,16 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title gradient-text">My Projects</h2>
+            <h2 class="section-title">My Projects</h2>
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="desktop">Desktop</button>
+                <button class="filter-btn" data-filter="Web Development">Web Dev</button>
+                <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+                <button class="filter-btn" data-filter="Game Development">Game Dev</button>
+                <button class="filter-btn" data-filter="Data Science">Data Science</button>
             </div>
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Projects will be loaded dynamically -->
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
             </div>
         </div>
     </section>
@@ -114,42 +146,43 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title gradient-text">Get In Touch</h2>
+            <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>your.email@example.com</p>
+                    <h3>Let's collaborate</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong> hello@developer.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong> Remote / Global
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <div>
-                            <h3>GitHub</h3>
-                            <p>github.com/yourusername</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <div>
-                            <h3>LinkedIn</h3>
-                            <p>linkedin.com/in/yourusername</p>
-                        </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank">GitHub</a>
+                        <a href="#" class="social-link" target="_blank">LinkedIn</a>
+                        <a href="#" class="social-link" target="_blank">Twitter</a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contact-form">
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Send Message</button>
                 </form>
             </div>
         </div>
@@ -158,122 +191,82 @@
     <!-- Admin Section -->
     <section id="admin" class="admin">
         <div class="container">
-            <div class="admin-login" id="adminLogin">
-                <div class="login-card">
-                    <h2>Admin Login</h2>
-                    <form id="loginForm">
-                        <div class="form-group">
-                            <input type="text" id="username" placeholder="Username" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" id="password" placeholder="Password" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Login</button>
-                    </form>
+            <h2 class="section-title">Admin Panel</h2>
+            <div class="admin-content">
+                <!-- Login Form -->
+                <div class="login-form" id="login-form">
+                    <div class="glass-card">
+                        <h3>Admin Login</h3>
+                        <form id="admin-login">
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn--primary">Login</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-            <div class="admin-panel" id="adminPanel" style="display: none;">
-                <h2 class="section-title gradient-text">Admin Panel</h2>
-                <div class="admin-actions">
-                    <button class="btn btn-primary" id="addProjectBtn">Add New Project</button>
-                    <button class="btn btn-secondary" id="logoutBtn">Logout</button>
-                </div>
-                <div class="admin-projects" id="adminProjects">
-                    <!-- Admin projects will be loaded here -->
+
+                <!-- Admin Dashboard -->
+                <div class="admin-dashboard hidden" id="admin-dashboard">
+                    <div class="dashboard-header">
+                        <h3>Project Management</h3>
+                        <button class="btn btn--secondary" id="logout-btn">Logout</button>
+                    </div>
+                    
+                    <!-- Add Project Form -->
+                    <div class="glass-card">
+                        <h4>Add New Project</h4>
+                        <form id="add-project-form">
+                            <div class="form-group">
+                                <label for="project-title" class="form-label">Project Title</label>
+                                <input type="text" id="project-title" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-description" class="form-label">Description</label>
+                                <textarea id="project-description" class="form-control" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-category" class="form-label">Category</label>
+                                <select id="project-category" class="form-control" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Full Stack">Full Stack</option>
+                                    <option value="Game Development">Game Development</option>
+                                    <option value="Data Science">Data Science</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-tech" class="form-label">Tech Stack (comma separated)</label>
+                                <input type="text" id="project-tech" class="form-control" placeholder="React, Node.js, MongoDB" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-url" class="form-label">Demo URL</label>
+                                <input type="url" id="demo-url" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="github-url" class="form-label">GitHub URL</label>
+                                <input type="url" id="github-url" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn--primary">Add Project</button>
+                        </form>
+                    </div>
+
+                    <!-- Existing Projects -->
+                    <div class="glass-card">
+                        <h4>Existing Projects</h4>
+                        <div class="projects-list" id="admin-projects-list">
+                            <!-- Projects will be loaded here -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Add Project Modal -->
-    <div id="addProjectModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Add New Project</h2>
-                <span class="close">&times;</span>
-            </div>
-            <form id="addProjectForm">
-                <div class="form-group">
-                    <input type="text" id="projectTitle" placeholder="Project Title" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="projectDescription" placeholder="Project Description" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="projectTechnologies" placeholder="Technologies (comma-separated)" required>
-                </div>
-                <div class="form-group">
-                    <select id="projectCategory" required>
-                        <option value="">Select Category</option>
-                        <option value="web">Web Development</option>
-                        <option value="mobile">Mobile App</option>
-                        <option value="desktop">Desktop Application</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="url" id="projectLiveUrl" placeholder="Live Demo URL (optional)">
-                </div>
-                <div class="form-group">
-                    <input type="url" id="projectGithubUrl" placeholder="GitHub Repository URL (optional)">
-                </div>
-                <div class="form-group">
-                    <input type="file" id="projectImage" accept="image/*" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Add Project</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Edit Project Modal -->
-    <div id="editProjectModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Edit Project</h2>
-                <span class="close">&times;</span>
-            </div>
-            <form id="editProjectForm">
-                <input type="hidden" id="editProjectId">
-                <div class="form-group">
-                    <input type="text" id="editTitle" placeholder="Project Title" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="editDescription" placeholder="Project Description" rows="4" required></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="editTechnologies" placeholder="Technologies (comma-separated)" required>
-                </div>
-                <div class="form-group">
-                    <select id="editCategory" required>
-                        <option value="">Select Category</option>
-                        <option value="web">Web Development</option>
-                        <option value="mobile">Mobile App</option>
-                        <option value="desktop">Desktop Application</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="url" id="editLiveUrl" placeholder="Live Demo URL (optional)">
-                </div>
-                <div class="form-group">
-                    <input type="url" id="editGithubUrl" placeholder="GitHub Repository URL (optional)">
-                </div>
-                <div class="form-group">
-                    <input type="file" id="editImageUpload" accept="image/*">
-                    <small>Leave empty to keep current image</small>
-                </div>
-                <div class="current-image-preview" id="currentImagePreview">
-                    <!-- Current image will be shown here -->
-                </div>
-                <button type="submit" class="btn btn-primary">Update Project</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="app.js"></script>
 </body>
