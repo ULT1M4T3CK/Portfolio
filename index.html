@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">DEV</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#admin" class="nav-link">Admin</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Creative</span>
+                <span class="title-line gradient-text">Developer</span>
+            </h1>
+            <p class="hero-subtitle">Full-Stack Developer & UI/UX Designer</p>
+            <p class="hero-description">Crafting innovative digital experiences with modern technologies and creative problem-solving.</p>
+            <button class="cta-button" onclick="scrollToSection('projects')">
+                <span>View My Work</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate full-stack developer with expertise in modern web technologies. I love creating interactive experiences that blend functionality with beautiful design.</p>
+                    <p>With experience in both frontend and backend development, I bring ideas to life through clean code and innovative solutions.</p>
+                </div>
+                <div class="skills-section">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="JavaScript" data-level="95">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="React" data-level="90">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Node.js" data-level="85">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Python" data-level="80">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Three.js" data-level="75">
+                            <div class="skill-info">
+                                <span class="skill-name">Three.js</span>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="MongoDB" data-level="70">
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Web Development">Web Dev</button>
+                <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+                <button class="filter-btn" data-filter="Game Development">Game Dev</button>
+                <button class="filter-btn" data-filter="Data Science">Data Science</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's collaborate</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong> hello@developer.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Location:</strong> Remote / Global
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank">GitHub</a>
+                        <a href="#" class="social-link" target="_blank">LinkedIn</a>
+                        <a href="#" class="social-link" target="_blank">Twitter</a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admin Section -->
+    <section id="admin" class="admin">
+        <div class="container">
+            <h2 class="section-title">Admin Panel</h2>
+            <div class="admin-content">
+                <!-- Login Form -->
+                <div class="login-form" id="login-form">
+                    <div class="glass-card">
+                        <h3>Admin Login</h3>
+                        <form id="admin-login">
+                            <div class="form-group">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" id="username" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn--primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Admin Dashboard -->
+                <div class="admin-dashboard hidden" id="admin-dashboard">
+                    <div class="dashboard-header">
+                        <h3>Project Management</h3>
+                        <button class="btn btn--secondary" id="logout-btn">Logout</button>
+                    </div>
+                    
+                    <!-- Add Project Form -->
+                    <div class="glass-card">
+                        <h4>Add New Project</h4>
+                        <form id="add-project-form">
+                            <div class="form-group">
+                                <label for="project-title" class="form-label">Project Title</label>
+                                <input type="text" id="project-title" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-description" class="form-label">Description</label>
+                                <textarea id="project-description" class="form-control" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-category" class="form-label">Category</label>
+                                <select id="project-category" class="form-control" required>
+                                    <option value="">Select Category</option>
+                                    <option value="Web Development">Web Development</option>
+                                    <option value="Full Stack">Full Stack</option>
+                                    <option value="Game Development">Game Development</option>
+                                    <option value="Data Science">Data Science</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="project-tech" class="form-label">Tech Stack (comma separated)</label>
+                                <input type="text" id="project-tech" class="form-control" placeholder="React, Node.js, MongoDB" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="demo-url" class="form-label">Demo URL</label>
+                                <input type="url" id="demo-url" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="github-url" class="form-label">GitHub URL</label>
+                                <input type="url" id="github-url" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn--primary">Add Project</button>
+                        </form>
+                    </div>
+
+                    <!-- Existing Projects -->
+                    <div class="glass-card">
+                        <h4>Existing Projects</h4>
+                        <div class="projects-list" id="admin-projects-list">
+                            <!-- Projects will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
